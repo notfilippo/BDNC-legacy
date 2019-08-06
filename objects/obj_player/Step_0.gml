@@ -2,8 +2,17 @@
 
 #region movement
 
-if (!instance_exists(obj_enemy)) {
-	room_goto_next()	
+if (instance_exists(obj_camera) && obj_camera.follow = noone) {
+	obj_camera.follow = id	
+}
+
+if (!instance_exists(obj_enemy) || won) {
+	won = true
+	camera_fade_to(0.8)
+	if (won && obj_camera.alpha = 0.8) {
+		room_goto_next()	
+	}
+	return
 }
 
 var xx = keyboard_check(ord("D")) - keyboard_check(ord("A"))

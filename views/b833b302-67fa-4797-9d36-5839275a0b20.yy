@@ -7,7 +7,8 @@
         "3e01341c-dcc0-4e77-9cf4-52a02e6f941b",
         "acabeb76-a420-496b-b04f-2030af3bb4ef",
         "753ab49d-dc55-4b63-8764-105da11850fb",
-        "58105965-0c2e-4493-8c5d-d7f418b1bd5b"
+        "58105965-0c2e-4493-8c5d-d7f418b1bd5b",
+        "6cb29d00-ba62-4424-b366-ba73f05e8534"
     ],
     "filterType": "GMSprite",
     "folderName": "fx",

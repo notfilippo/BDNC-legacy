@@ -9,7 +9,7 @@
         "b651b2bf-3761-4d11-a95c-44dc7832d695"
     ],
     "filterType": "GMObject",
-    "folderName": "presentation",
+    "folderName": "presentations",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

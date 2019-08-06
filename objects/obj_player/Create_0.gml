@@ -22,18 +22,20 @@ enum interaction {
 	none = -1
 }
 
-if (audio_is_playing(global.snd)) {
-	audio_stop_sound(global.snd)	
+if (!is_undefined(SOUND_MENU) && audio_is_playing(SOUND_MENU)) {
+	audio_stop_sound(SOUND_MENU)	
+	SOUND_MENU = undefined
 }
 
-global.snd = audio_play_sound(snd_game, 1, true)
+if (is_undefined(SOUND_GAME)) {
+	SOUND_GAME = audio_play_sound(snd_game, 1, true)
+}
 
 last_interaction = interaction.none
 current_interaction = interaction.none
 can_use_weapon = true
 current_weapon = weapon.none
-
-obj_camera.follow = id
+won = false
 
 var layer_id = layer_get_id("Collision")
 collision_tile_map_id = layer_tilemap_get_id(layer_id)

@@ -12,7 +12,7 @@ if (hover && mouse_check_button(mb_left)) {
 	clicked = true
 } else {
 	draw_nine_slice(sprite_index, 1, x1, y1, x2, y2)
-	draw_nine_slice(sprite_index, 0, x1, y1 - 2, x2, y2 - 2)
+	draw_nine_slice(sprite_index, 0, x1, y1 - 4, x2, y2 - 4)
 }
 
 if (clicked && mouse_check_button_released(mb_left)) {
@@ -27,10 +27,10 @@ if (hover && mouse_check_button(mb_left)) {
 	draw_text(GUI_WIDTH / 2, y + button_padding, text)
 } else if (hover) {
 	draw_set_color(make_color_rgb(64, 64, 64))
-	draw_text(GUI_WIDTH / 2, y + button_padding - 2, text)
+	draw_text(GUI_WIDTH / 2, y + button_padding - 4, text)
 } else {
 	draw_set_color(c_black)
-	draw_text(GUI_WIDTH / 2, y + button_padding - 2, text)
+	draw_text(GUI_WIDTH / 2, y + button_padding - 4, text)
 }
 
 draw_set_color(c_white)

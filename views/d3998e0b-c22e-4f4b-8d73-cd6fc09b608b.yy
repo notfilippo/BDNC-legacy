@@ -8,7 +8,8 @@
         "801e822b-fe5e-42f9-9f16-75302fac4f8c",
         "c8e24914-138c-4a28-8f6c-23c3e719ee0d",
         "d4fd81ef-3210-4b05-bfd8-e9635a220f96",
-        "310b6d69-6440-439b-924b-d429d7832a86"
+        "310b6d69-6440-439b-924b-d429d7832a86",
+        "20757f08-a2f5-405c-9af7-b19d7a0d5c30"
     ],
     "filterType": "GMSprite",
     "folderName": "helpers",

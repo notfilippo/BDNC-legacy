@@ -14,17 +14,6 @@ switch (mode) {
 			cy_to = follow.y + follow.sprite_height / 2
 		}
 		break
-	case camera_mode.peek:
-		if (follow != noone && instance_exists(follow)) {
-			if (gamepad_is_connected(0)) {
-				cx = follow.x + follow.sprite_width / 2
-				cy = follow.y + follow.sprite_height / 2
-			} else {
-				cx = lerp(follow.x + follow.sprite_width / 2, mouse_x, 0.05)
-				cy = lerp(follow.y + follow.sprite_height / 2, mouse_y, 0.05)
-			}
-		}
-		break
 }
 
 if (keyboard_check_pressed(vk_escape)) {
@@ -60,6 +49,9 @@ if (shake) {
         shake_duration = 5
     }
 }
+
+cx = clamp(cx, camera_get_view_width(camera) / 2, room_width - camera_get_view_width(camera) / 2)
+cy = clamp(cy, camera_get_view_height(camera) / 2, room_height - camera_get_view_height(camera) / 2)
 
 var view = matrix_build_lookat(cx, cy, -10, cx, cy, 0, 0, 1, 0)
 camera_set_view_mat(camera, view)

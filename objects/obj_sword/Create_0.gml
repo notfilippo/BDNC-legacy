@@ -13,6 +13,6 @@ y = y + radius * dsin(image_angle + 180) // beacause y is inverted
 movement_direction = image_angle
 movement_speed = 150 // per seconds
 movement_total = 0
-movement_target = 32
+movement_target = 48
 
 camera_shake()

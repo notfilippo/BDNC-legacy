@@ -17,8 +17,10 @@ VIEW_HEIGHT = BASE_HEIGHT
 #macro GUI_WIDTH global.graphics_gui_width
 #macro GUI_HEIGHT global.graphics_gui_height
 
-GUI_WIDTH = BASE_WIDTH
-GUI_HEIGHT = BASE_HEIGHT
+#macro GUI_SCALE 2
+
+GUI_WIDTH = BASE_WIDTH * GUI_SCALE
+GUI_HEIGHT = BASE_HEIGHT * GUI_SCALE
 
 #macro WINDOW_WIDTH global.graphics_window_width
 #macro WINDOW_HEIGHT global.graphics_window_height
@@ -30,8 +32,7 @@ GUI_HEIGHT = BASE_HEIGHT
 CAMERA_ZOOM = 1
 
 enum camera_mode {
-	follow,
-	peek
+	follow
 }
 
 follow = obj_player

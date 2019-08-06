@@ -1,6 +1,6 @@
 /// @description Shoot
 
-if (distance_to_object(obj_player) < line_of_sight) {
+if (distance_to_object(obj_player) < line_of_sight && camera_in_view(id)) {
 	var spawn_x = x + sprite_width / 2
 	var spawn_y = y + sprite_height / 2
 	with (instance_create_layer(spawn_x, spawn_y, "Projectiles", obj_laser_projectile)) {
