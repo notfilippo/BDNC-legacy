@@ -1,5 +1,7 @@
 /// @description Animate and move with motion planning
 
+if (live_call()) return live_result
+
 #region movement
 
 if (distance_to_object(obj_player) < line_of_sight) {
@@ -50,7 +52,7 @@ if (angle > 180 && angle < 270 && (image_index < left_frames || image_index > le
 
 #region attack
 
-if (distance_to_object(obj_player) < line_of_sight && camera_in_view(id) && !attacking) {
+if (distance_to_object(obj_player) < line_of_attack && camera_in_view(id) && !attacking) {
 	alarm[0] = 5
 	attacking = true
 }

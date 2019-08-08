@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "15dc5c52-a137-4fc3-bd32-504ce1628ee3",
+            "Value": {
+                "id": "15134eb3-253f-43fd-8362-3211a23768c8",
+                "resourcePath": "datafiles_yy\/gmlive-server.n.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "164b73d7-6d4b-4868-8759-fc6bee7ea55c",
             "Value": {
                 "id": "076c7692-cfc8-45b8-950a-e24a3df443b4",
@@ -180,6 +188,14 @@
                 "id": "45437e3c-a811-4f9c-bca9-e446df37e445",
                 "resourcePath": "sounds\/snd_swoosh\/snd_swoosh.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "256b8d90-bc4d-4bba-abb9-51d9f26c86dc",
+            "Value": {
+                "id": "e0681dee-e16b-4147-9457-4d341d67760a",
+                "resourcePath": "views\/256b8d90-bc4d-4bba-abb9-51d9f26c86dc.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -303,11 +319,27 @@
             }
         },
         {
+            "Key": "33634c94-b392-4387-9e8a-14a6330a1256",
+            "Value": {
+                "id": "ed07ba4b-0be9-4f7b-a076-dd4996825cba",
+                "resourcePath": "objects\/obj_gmlive\/obj_gmlive.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "338d4c89-3d4e-43b3-871c-7c5fb4c47f26",
             "Value": {
                 "id": "dbe85655-4dc8-4c88-b44c-a660f0f45176",
                 "resourcePath": "scripts\/camera_shake\/camera_shake.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "34ebc914-3fea-42f7-a6b9-db18b75cd055",
+            "Value": {
+                "id": "e3863171-b164-48ab-9733-185a358e8e6d",
+                "resourcePath": "extensions\/GMLive\/GMLive.yy",
+                "resourceType": "GMExtension"
             }
         },
         {

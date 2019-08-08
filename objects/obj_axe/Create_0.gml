@@ -11,6 +11,6 @@ x = x + radius * dcos(image_angle)
 y = y + radius * dsin(image_angle + 180) // beacause y is inverted
 
 rotation_target = image_angle + 360
-rotation_speed = 180 // per second
+rotation_speed = 90 // deg per second
 
 camera_shake()

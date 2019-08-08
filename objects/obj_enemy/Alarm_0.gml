@@ -1,5 +1,7 @@
 /// @description Shoot
 
+if (live_call()) return live_result
+
 if (distance_to_object(obj_player) < line_of_sight && camera_in_view(id)) {
 	var spawn_x = x + sprite_width / 2
 	var spawn_y = y + sprite_height / 2

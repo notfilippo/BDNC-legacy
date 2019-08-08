@@ -18,12 +18,17 @@ if (image_angle >= rotation_target) {
 x = obj_player.x + obj_player.sprite_width / 2 + radius * dcos(image_angle)
 y = obj_player.y + obj_player.sprite_height / 2 + radius * dsin(image_angle + 180) // beacause y is inverted
 
-var collision = instance_place(x, y, obj_enemy)
-if (collision != noone) {
-	audio_play_sound(snd_swoosh_collision, 2, false)
-	with (collision) {
-		hp = 0
+var sword = id
+with (obj_enemy) {
+	if (place_meeting(x, y, sword)) {
+		hp = 0	
+		audio_play_sound(snd_swoosh_collision, 2, false)
 	}
 }
 
+with (obj_laser_projectile) {
+	if (place_meeting(x, y, sword)) {
+		instance_destroy()
+	}	
+}
 

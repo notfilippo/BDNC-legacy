@@ -9,7 +9,7 @@ if (instance_exists(obj_camera) && obj_camera.follow = noone) {
 if (!instance_exists(obj_enemy) || won) {
 	won = true
 	camera_fade_to(0.8)
-	if (won && obj_camera.alpha = 0.8) {
+	if (won && obj_camera.alpha >= 0.8) {
 		room_goto_next()	
 	}
 	return

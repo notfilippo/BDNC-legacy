@@ -1,7 +1,15 @@
 /// @description Move (x, y) to (x_to, y_to)
 
 if (alpha < alpha_target) {
-	alpha += sign(alpha_target - alpha) * 0.02
+	alpha += 0.02
+	if (alpha > alpha_target) {
+		alpha = alpha_target
+	}
+} else if (alpha > alpha_target) {
+	alpha -= 0.02
+	if (alpha < alpha_target) {
+		alpha = alpha_target
+	}
 }
 
 switch (mode) {
@@ -40,6 +48,9 @@ if (new_width != WINDOW_WIDTH || new_height != WINDOW_HEIGHT) {
 	gui_fill()
 }
 
+cx = clamp(cx, camera_get_view_width(camera) / 2, room_width - camera_get_view_width(camera) / 2)
+cy = clamp(cy, camera_get_view_height(camera) / 2, room_height - camera_get_view_height(camera) / 2)
+
 if (shake) {
 	shake_duration--
     cx += choose(-shake_force, shake_force)
@@ -49,9 +60,6 @@ if (shake) {
         shake_duration = 5
     }
 }
-
-cx = clamp(cx, camera_get_view_width(camera) / 2, room_width - camera_get_view_width(camera) / 2)
-cy = clamp(cy, camera_get_view_height(camera) / 2, room_height - camera_get_view_height(camera) / 2)
 
 var view = matrix_build_lookat(cx, cy, -10, cx, cy, 0, 0, 1, 0)
 camera_set_view_mat(camera, view)

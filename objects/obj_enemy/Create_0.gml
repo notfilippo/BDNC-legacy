@@ -1,10 +1,13 @@
 /// @description Select enemy sprite and basic traits
 
+if (live_call()) return live_result
+
 ai_path = path_add()
 max_hp = 100
 movement_speed = 60
 animation_frames = 2
 line_of_sight = 128
+line_of_attack = 80
 attacking = false
 
 enum enemy_type {
